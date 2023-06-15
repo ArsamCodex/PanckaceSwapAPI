@@ -26,10 +26,10 @@ namespace ArsamCodex
 
             decimal tokensToSell = 1;
             decimal priceInBnb = await CalcSell(web3, tokensToSell, tokenAddress, pancakeSwapContract);
-            Console.WriteLine("SHIT_TOKEN VALUE IN BNB: " + priceInBnb + " | Just convert it to USD");
+            Console.WriteLine("SHIT_TOKEN VALUE IN BNB: " + priceInBnb );
 
-            decimal tokenValueInUsd = priceInBnb * bnbPrice;
-            Console.WriteLine($"SHIT_TOKEN VALUE IN USD: {tokenValueInUsd}");
+            //decimal tokenValueInUsd = priceInBnb * bnbPrice;
+           // Console.WriteLine($"SHIT_TOKEN VALUE IN USD: {tokenValueInUsd}");
         }
 
         private static async Task<decimal> CalcSell(Web3 web3, decimal tokensToSell, string tokenAddress, string pancakeSwapContract)
