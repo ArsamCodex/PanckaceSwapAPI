@@ -13,7 +13,10 @@ namespace ArsamCodex
     {
         static async Task Main(string[] args)
         {
+            ~Author~ Sami
+            //Pancakeswap solidity conract to read and undrestand mechanism that they use sinds there is no new dev and no active api and no reply in Guthub
             string pancakeSwapContract = "0x10ED43C718714eb63d5aA57B78B54704E256024E".ToLower();
+            //Here token address you want see Enter Token address here
             string tokenAddress = "0xa49e44976c236beb51a1f818d49b9b9759ed97b1";
 
             Web3 web3 = new Web3("https://bsc-dataseed1.binance.org");
