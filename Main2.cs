@@ -78,37 +78,7 @@ static async Task Main(string[] args)
             }
         }
 
-        private static async Task<decimal> CalcBNBPrice(Web3 web3, string pancakeSwapContract)
-        {
-            string bnbTokenAddress = "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c";
-            string usdTokenAddress = "0x55d398326f99059fF775485246999027B3197955";
-            decimal bnbToSell = 1;
-
-            try
-            {
-                var router = web3.Eth.GetContractQueryHandler<GetAmountsOutFunction>();
-                var result = await router.QueryDeserializingToObjectAsync<AmountsOutDTO>(
-                    new GetAmountsOutFunction
-                    {
-                        AmountIn = BigInteger.Parse(bnbToSell.ToString()),
-                        Path = new List<string> { bnbTokenAddress, usdTokenAddress }
-                    },
-                    pancakeSwapContract);
-
-                // Parse the result to extract the amountOut value
-                decimal amountOutValue = Web3.Convert.FromWei(result.Amounts[1]);
-
-                return amountOutValue;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("An error occurred during CalcBNBPrice:");
-                Console.WriteLine(ex.Message);
-                return 0;
-            }
-        }
-
-
+       
         private static async Task<int> GetDecimals(Web3 web3, string tokenAddress)
         {
             var tokenRouter = web3.Eth.GetContractQueryHandler<DecimalsFunction>();
