@@ -9,9 +9,6 @@ If you oroginal link pamcakeswap works whit 4 API endpoint Am woking to remake t
 
 here is some intresting function in contract
 
-
-
- // given an input amount of an asset and pair reserves, returns the maximum output amount of the other asset
     function getAmountOut(uint amountIn, uint reserveIn, uint reserveOut) internal pure returns (uint amountOut) {
         require(amountIn > 0, 'PancakeLibrary: INSUFFICIENT_INPUT_AMOUNT');
         require(reserveIn > 0 && reserveOut > 0, 'PancakeLibrary: INSUFFICIENT_LIQUIDITY');
