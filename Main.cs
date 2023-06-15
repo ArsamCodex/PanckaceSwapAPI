@@ -22,7 +22,7 @@ namespace ArsamCodex
             Web3 web3 = new Web3("https://bsc-dataseed1.binance.org");
 
             decimal bnbPrice = await CalcBNBPrice(web3, pancakeSwapContract);
-            Console.WriteLine($"CURRENT BNB PRICE: {bnbPrice}");
+           
 
             decimal tokensToSell = 1;
             decimal priceInBnb = await CalcSell(web3, tokensToSell, tokenAddress, pancakeSwapContract);
