@@ -7,7 +7,10 @@
 
 PLEASE NOTE THIS IS JUST AN EXAMPLE IT MAYBE RETURN NOT EXACT PRICE BUT READ CODE
 
-I have some correction now u get correct price for any low/High Level pairs 
+I have some correction now u get correct price for any low/High Level pairs ,
+Now All prices return In USDT 
+IT Wil Accept Onlly Bsc Network.
+Go to Main2 File
 
 
 All Original PancackeSwap Endpoint Are Not deprecated but manny issues whit other token price some token return exception and whit other word something what u not wana have 
